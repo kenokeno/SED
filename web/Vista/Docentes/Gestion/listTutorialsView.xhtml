@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+ 
+<ui:composition template="./defaultLayout.xhtml">
+    <ui:define name="title">Tutoriales</ui:define>
+ 
+    <ui:define name="content">
+        <h2>Añade un tutorial</h2>
+        <h:form>
+            <h:panelGrid columns="5">
+                <h:outputLabel for="title" value="Título" />
+                <h:outputLabel for="publicationDate" value="Fecha de publicación (dd/mm/aaaa)" />
+                <h:outputLabel for="category" value="Categoría" />
+                <h:outputLabel for="subCategory" value="Sub-categoría" />
+                <h:outputLabel for="subsubCategory" value="Sub-sub-categoría" />
+ 
+                <h:inputText id="title" label="Título" value="#{listTutorialsView.title}" required="true" />
+                <h:inputText id="publicationDate" label="Fecha de publicación" value="#{listTutorialsView.publicationDate}" required="true">
+                    <f:convertDateTime pattern="dd/MM/yyyy" />
+                </h:inputText>
+                <h:selectOneMenu id="category" label="Categoría" value="#{listTutorialsView.category}" converter="selectItemsConverter">
+                    <f:selectItems value="#{listTutorialsView.categories}" var="category" itemLabel="#{category.name}" />
+                    <f:ajax render="subCategory subsubCategory" />
+                </h:selectOneMenu>
+                <h:selectOneMenu id="subCategory" label="Sub-categoría" value="#{listTutorialsView.subCategory}" converter="selectItemsConverter">
+                    <f:selectItems value="#{listTutorialsView.subCategories}" var="subCategory" itemLabel="#{subCategory.name}" />
+                    <f:ajax render="subsubCategory" />
+                </h:selectOneMenu>
+                <h:selectOneMenu id="subsubCategory" label="Sub-sub-categoría" value="#{listTutorialsView.subsubCategory}" converter="selectItemsConverter">
+                    <f:selectItems value="#{listTutorialsView.subsubCategories}" var="subsubCategory" itemLabel="#{subsubCategory.name}" />
+                </h:selectOneMenu>
+            </h:panelGrid>
+            <h:commandButton action="#{listTutorialsView.add}" value="Añadir" />
+            <h:messages errorClass="error" />
+        </h:form>
+ 
+        <h2>Lista de tutoriales</h2>
+        <h:dataTable id="tutorials" value="#{listTutorialsView.tutorials}" var="tutorial" border="1">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Título" />
+                </f:facet>
+                <h:outputText value="#{tutorial.title}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Categoría" />
+                </f:facet>
+                <h:outputText value="#{tutorial.category.name}">
+                </h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Fecha de publicación" />
+                </f:facet>
+                <h:outputText value="#{tutorial.publicationDate}">
+                    <f:convertDateTime dateStyle="full" />
+                </h:outputText>
+            </h:column>
+        </h:dataTable>
+    </ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,295 @@
+/* CSS Document */
+body
+{
+    background-color:#FFF;
+   
+ /*background-image:url(../imagenes/gradient.jpg);
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: initial;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    background-size: initial;
+    text-align:center;	
+*/	
+    width: 98%;
+    height: 100%;
+    color:#000;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:12px;
+}
+/*
+body{
+	background-color:#4D6985;
+}
+*/
+header{
+	position:relative;
+	z-index:2;
+	color:#000;
+	width:auto;
+	height:auto;
+	min-height:50px;
+	
+}
+
+.tab-login
+{
+
+	position: absolute;
+	left: 41px;
+	top: 43px;
+    
+	width: 312px;
+}
+
+
+#areaTrabajo
+{
+/*
+background-image:url(imagenes/logo_itspa.png);
+	background-repeat:no-repeat;
+z-index:0;
+opacity:0.3;
+border-radius:360px;
+*/
+z-index:1;
+opacity:0.8;
+
+background: transparent;
+	
+	margin-left:15%;
+        margin-right: 15%;
+	
+	margin-top:-10px;
+        margin-bottom: -5px;
+	width:70%;
+	/*height:780px;*/
+        
+}
+#titulo
+{
+	text-align: center;
+/*
+        position: absolute;
+	left: 440px;
+	top: 76px;
+ */
+}
+
+#inicio
+{
+	
+    position: relative;
+	
+	top: 15px;
+
+        border-radius:15px;
+	color:#FFF;
+	width: 403px;
+	height: 194px;
+	background-color: #600;
+
+}
+#pie{
+    position: relative;
+    z-index: 2;
+   top: 20px;
+}
+
+#usuario
+{
+    text-align: center;
+    /*
+    position: absolute;
+    left: 440px;
+    top: 120px;
+    */
+}
+
+
+.contenido
+{
+    background-color: #275b81;
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    padding-bottom: 0px;
+    
+}
+.cuerpo
+{
+    
+    
+    width: 100%;
+    
+    margin-left: -35%;
+}
+#contenido{
+	
+	width:102.4%;
+	height:auto;
+/*	min-height:400px;
+        display:none;
+*/
+	background-color:#13314E;
+	text-align:center;
+        border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+	padding-top:30px;
+        border:1px solid black;
+        padding-bottom: 50px;
+}
+#cuerpo{
+	width:70%;
+	height:auto;
+	
+}
+#targetDiv
+{
+	min-height:400px;
+	height:auto;
+}
+
+
+
+.botones
+{
+	border:ridge;
+	border-radius:12px;
+	width:120px;
+	height:40px;
+	text-align:center;
+	color:#FFFFFF;
+	background-color:#000000;;
+	
+	box-shadow:5px 5px 5px #003366;
+
+}
+
+/* Menu */
+
+.slider{
+	background-color:#046;
+	padding-left: 22%;
+        
+	 border-top-left-radius:20px;
+	border-top-right-radius:20px;
+
+	
+	position:absolute;
+	width:48%;
+	height:60px;
+	alignment-adjust:middle;
+	margin-left:14.9%;
+	z-index:1;
+}
+.slider ul{
+	list-style:none;
+	padding:0px;
+        
+        
+            
+}
+.slider ul li{
+	float:left;
+	margin-left:1px;
+        border-radius: 15px;
+       
+        
+}
+.slider ul li a{
+	display:block;
+	background-color:#275b81;
+        /*background-color:#046;*/
+	color:#FFF;
+	width:120px;
+	height:30px;
+	text-align:center;
+	padding-top:10px;
+        border-radius: 15px;
+         border: 1px solid black;
+	
+}
+.slider li li{
+	float:none;	
+}
+.slider ul ul  ul{
+   top: 0;
+   display: block;
+   float: right;
+border-top: 1px solid black;
+border-bottom:1px solid black;
+}
+
+.slider ul ul  ul li{
+     display: list-item;
+    float: none;
+}
+.slider a:hover{ 
+background-color:#0CF;
+color:#000;
+padding-bottom:0px;
+padding-top:20px;
+height:20px;
+border-radius: 15px;
+border: 1px solid black;
+}
+
+.message{
+    color:#FF0000;
+    width:auto;
+}
+/*tabla*/
+
+.TABLA {
+ /* border-collapse:collapse; */
+  font-family:verdana, arial, sans-serif; 
+  font-size:10px; 
+  line-height:0px; 
+  border:2px solid #363;
+  background-color: #3d80df;
+  padding: 4px 4px 4px 4px;
+  
+  border-top-left-radius:15px;
+  border-top-right-radius:15px;
+  border-bottom-left-radius:15px;
+  border-bottom-right-radius:15px;
+ 
+}
+
+.TABLA TH {
+color: black;
+background:#839965;
+
+}
+.TABLA TH:hover{
+    color: #363;
+    background-color:chartreuse;
+}
+.TABLA TD:first-child{
+    background:#839965;
+    
+}
+
+.TABLA TD {
+color:black; 
+background-color: #f5f5f5;
+}
+.TABLA td, th {
+  
+  border-top:1px solid #ddd;
+}
+.TABLA tr:hover, tr.odd:hover {
+	background-color: #3d80df;
+	color: #ffffff;
+}
+/*
+pruebas
+*/
+/* Grid Options */
